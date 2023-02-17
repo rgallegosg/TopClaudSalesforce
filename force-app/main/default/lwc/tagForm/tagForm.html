@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Tag Assignment">
+      <lightning-record-edit-form
+        object-api-name={tagObject}>
+        <lightning-layout multiple-rows vertical-align="start">
+          <lightning-layout-item size="12" padding="horizontal-small">
+              <div class="slds-form-element">                    
+                <div class="slds-form-element__control">
+                  <lightning-combobox
+                    name="reason"
+                    label="Tag Reason"
+                    value={value}
+                    placeholder="Select Progress"
+                    options={options}
+                    onchange={handleChange}>
+                  </lightning-combobox>
+                </div>
+              </div>
+          </lightning-layout-item>
+          <lightning-layout-item size="12" padding="horizontal-small">
+            <div class="slds-form-element">
+              <label for={reminderDate} class="slds-form-element__label">Reminder Date</label>
+              <div class="slds-form-element__control">
+                <lightning-input-field variant="label-hidden" field-name={reminderDate} required></lightning-input-field>
+              </div>
+            </div>
+        </lightning-layout-item>
+        </lightning-layout>
+      </lightning-record-edit-form>
+    </lightning-card>
+  </template>

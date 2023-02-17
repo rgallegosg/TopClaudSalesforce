@@ -1,0 +1,11 @@
+<template>
+    <template if:true={isTrack}>
+      <c-track-form></c-track-form>
+    </template>
+    <template if:true={isTag}>
+      <c-tag-form></c-tag-form>
+    </template>
+    <template if:true={isPing}>
+      <c-ping-form></c-ping-form>
+    </template>
+</template>

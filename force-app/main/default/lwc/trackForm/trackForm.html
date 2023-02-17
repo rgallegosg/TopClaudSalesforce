@@ -1,0 +1,44 @@
+<template>
+  <lightning-card title={label.trackAssignment}>
+    <lightning-record-edit-form
+      object-api-name={trackObject}>
+      <lightning-layout multiple-rows vertical-align="start">
+        <lightning-layout-item size="6" padding="horizontal-small">
+            <div class="slds-form-element">                    
+              <div class="slds-form-element__control">
+                <lightning-input-field field-name={reason}></lightning-input-field>
+              </div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="horizontal-small">
+          <div class="slds-form-element">
+            <label for={reminderDate} class="slds-form-element__label">{label.reminderDate}</label>
+            <div class="slds-form-element__control">
+              <lightning-input-field variant="label-hidden" field-name={reminderDate} required></lightning-input-field>
+            </div>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="horizontal-small">
+          <div class="slds-form-element">
+            <label for={primaryRecruiter} class="slds-form-element__label">{label.primaryRecruiter}</label>
+            <div class="slds-form-element__control">
+              <lightning-input-field variant="label-hidden" field-name={primaryRecruiter} required></lightning-input-field>
+            </div>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="horizontal-small">
+          <div class="slds-form-element">
+            <label for={secondaryRecruiter} class="slds-form-element__label">{label.secondaryRecruiter}</label>
+            <div class="slds-form-element__control">
+              <lightning-input-field variant="label-hidden" field-name={secondaryRecruiter} required></lightning-input-field>
+            </div>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="horizontal-small" class="slds-m-top_small">
+          <lightning-button label={label.createTrack} type="submit" icon-name="utility:save" disabled></lightning-button>
+          <p>button disabled for now :)</p>
+        </lightning-layout-item>
+      </lightning-layout>
+    </lightning-record-edit-form>
+  </lightning-card>
+</template>
