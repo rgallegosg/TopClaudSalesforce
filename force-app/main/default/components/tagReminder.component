@@ -1,0 +1,28 @@
+<apex:component access="global" controller="tagComponent">
+    <apex:attribute name="objectName" description="Attribute on the component."
+                  type="String" required="required" assignTo="{!SObjectName}"/>            
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            tr {
+              border-bottom: 1px solid #ddd;
+            }
+        </style>
+        <table>
+            <tr>
+              <th>Candidate Name</th>
+              <th>Skills</th>
+            <th>Company (Acc)</th>
+            </tr>
+            <apex:repeat value="{!SObjectName}" var="listItem" id="item">
+                <tr>
+                <td>{!listItem.Id}</td>
+                <td>Fecha jaja</td>
+                <td>Holi</td>
+                </tr>
+            </apex:repeat>
+          </table>
+</apex:component>
