@@ -1,11 +1,13 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api, wire } from 'lwc';
+import { getRecord } from 'lightning/uiRecordApi';
 
 const TRACK = 'Track'
 const PING = 'Ping'
 const TAG = 'Tag'
 
 export default class DynamicForm extends LightningElement {
-  @api baseObject
+  @api recordId;
+  @api baseObject;
 
   get isTrack() {
     return this.baseObject === TRACK

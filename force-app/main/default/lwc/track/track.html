@@ -1,0 +1,8 @@
+<template>
+  <template if:true={isTrackOpen}>
+    <p>Render static track info along with 'convert' and 'close' buttons</p>
+  </template>
+  <template if:false={isTrackOpen}>
+    <c-track-form onswitchview={handleSwitchView} contact-id={contactId}></c-track-form>
+  </template>
+</template>

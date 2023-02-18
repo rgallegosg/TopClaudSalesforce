@@ -1,7 +1,9 @@
 <template>
   <lightning-card title={label.trackAssignment}>
     <lightning-record-edit-form
-      object-api-name={trackObject}>
+      object-api-name={trackObject}
+      onsubmit={handleSubmit}
+      onsuccess={handleSuccess}>
       <lightning-layout multiple-rows vertical-align="start">
         <lightning-layout-item size="6" padding="horizontal-small">
             <div class="slds-form-element">                    
@@ -35,8 +37,7 @@
           </div>
         </lightning-layout-item>
         <lightning-layout-item size="12" padding="horizontal-small" class="slds-m-top_small">
-          <lightning-button label={label.createTrack} type="submit" icon-name="utility:save" disabled></lightning-button>
-          <p>button disabled for now :)</p>
+          <lightning-button label={label.createTrack} type="submit" icon-name="utility:save"></lightning-button>
         </lightning-layout-item>
       </lightning-layout>
     </lightning-record-edit-form>

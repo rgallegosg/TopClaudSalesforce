@@ -5,8 +5,6 @@
     <masterLabel>Dynamic Form</masterLabel>
     <description>Component that allows users to dynamically create froms for objects: Track, Tag, Ping</description>
     <targets>
-        <target>lightning__AppPage</target>
-        <target>lightning__HomePage</target>
         <target>lightning__RecordPage</target>
     </targets>
     <targetConfigs>
